@@ -11,3 +11,40 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# text editor
+export EDITOR=bbedit
+
+# path
+export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=~/.rbenv/shims:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# pharmgkb paths
+export PHARMGKB=~/pharmgkb/PharmGKB
+export PHARMGKB_USER=whaleyr
+export PHARMGKB_TOOLS=~/pharmgkb/tools
+export PSB_BASE=~/pharmgkb/PSB
+
+# java app paths
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/Current/Contents/Home
+export CATALINA_HOME=$PHARMGKB_TOOLS/tomcat
+export CATALINA_BASE=$PHARMGKB/runtime
+export ANT_HOME=/usr/local/opt/ant/libexec
+export ANT_OPTS=-Xmx768M
+
+# for ansible
+export ANSIBLE=$PHARMGKB_TOOLS/ansible
+export ANSIBLE_HOSTS=$HOME/pharmgkb/league-servers/ansible/hosts.ini
+export PYTHONPATH=${ANSIBLE}/lib
+export ANSIBLE_LIBRARY=${ANSIBLE}/library
+
+# aliases
+alias git='/usr/local/bin/git'
+alias smi='cd $PHARMGKB'
+alias psb='cd $PSB_BASE'
+alias luke='java -jar ~/pharmgkb/tools/lukeall-3.5.0.jar'
+alias league='idea ~/pharmgkb/league-servers'
+alias swag='scp $PHARMGKB/pgkb-web/webapp/swagger.json b:~/PharmGKB/runtime/webapps/ROOT/api-docs/'
