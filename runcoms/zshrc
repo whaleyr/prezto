@@ -12,6 +12,9 @@ fi
 
 # Customize to your needs...
 
+# iTerm2 shell integration
+# source ~/.iterm2_shell_integration.zsh
+
 # text editor
 export EDITOR=bbedit
 
@@ -46,5 +49,5 @@ alias git='/usr/local/bin/git'
 alias smi='cd $PHARMGKB'
 alias psb='cd $PSB_BASE'
 alias luke='java -jar ~/pharmgkb/tools/lukeall-3.5.0.jar'
-alias league='idea ~/pharmgkb/league-servers'
-alias swag='scp $PHARMGKB/pgkb-web/webapp/swagger.json b:~/PharmGKB/runtime/webapps/ROOT/api-docs/'
+alias league='cd ~/pharmgkb/league-servers'
+alias logdir='open $PHARMGKB/runtime/site/logs/'
