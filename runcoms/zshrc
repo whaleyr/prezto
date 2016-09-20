@@ -39,9 +39,9 @@ export ANT_HOME=/usr/local/opt/ant/libexec
 export ANT_OPTS=-Xmx768M
 
 # for ansible
-export ANSIBLE=$PHARMGKB_TOOLS/ansible
+export ANSIBLE=/usr/local/lib/python2.7/site-packages/ansible
 export ANSIBLE_HOSTS=$HOME/pharmgkb/league-servers/ansible/hosts.ini
-export PYTHONPATH=${ANSIBLE}/lib
+export PYTHONPATH=/usr/local/bin/python
 export ANSIBLE_LIBRARY=${ANSIBLE}/library
 
 # aliases
@@ -51,3 +51,5 @@ alias psb='cd $PSB_BASE'
 alias luke='java -jar ~/pharmgkb/tools/lukeall-3.5.0.jar'
 alias league='cd ~/pharmgkb/league-servers'
 alias logdir='open $PHARMGKB/runtime/site/logs/'
+alias datadir='open $PHARMGKB/../data/common/'
+alias minecraft='java -d64 -Xmx4g -jar $HOME/Applications/Minecraft.jar'
