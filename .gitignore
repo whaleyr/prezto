@@ -1,4 +1,5 @@
 *.zwc
 *.zwc.old
+.idea
 modules/*/cache.zsh
 contrib
