@@ -19,3 +19,6 @@ alias cdf='cd "$(pfd)"'
 
 # Pushes directory to the current Finder directory.
 alias pushdf='pushd "$(pfd)"'
+
+# Open the iOS simulator
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
