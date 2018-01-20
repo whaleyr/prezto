@@ -22,6 +22,7 @@ export EDITOR=bbedit
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/.rbenv/shims:$PATH
+export PATH=~/Applications/anaconda3/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/opt/apr/bin:$PATH
@@ -33,6 +34,7 @@ eval "$(rbenv init -)"
 export PHARMGKB=~/pharmgkb/PharmGKB
 export PHARMGKB_USER=whaleyr
 export PHARMGKB_TOOLS=~/pharmgkb/tools
+export PHARMGKB_WEB=~/pharmgkb/pgkb-web-site
 export PSB_BASE=~/pharmgkb/PSB
 
 # java app paths
@@ -44,14 +46,18 @@ export ANT_OPTS=-Xmx768M
 
 # for ansible
 export ANSIBLE=/usr/local/lib/python2.7/site-packages/ansible
-export ANSIBLE_HOSTS=$HOME/pharmgkb/league-servers/ansible/hosts.ini
+export ANSIBLE_INVENTORY=$HOME/pharmgkb/league-servers/ansible/hosts.ini
 export PYTHONPATH=/usr/local/bin/python
 export ANSIBLE_LIBRARY=${ANSIBLE}/library
 export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.vault_pass.txt
 
+# for homebrew, wait some time before doing another auto update
+export HOMEBREW_AUTO_UPDATE_SECS=3600
+
 # aliases
 alias git='/usr/local/bin/git'
 alias smi='cd $PHARMGKB'
+alias web='cd $PHARMGKB_WEB'
 alias psb='cd $PSB_BASE'
 alias luke='java -jar ~/pharmgkb/tools/lukeall-3.5.0.jar'
 alias league='cd ~/pharmgkb/league-servers'
@@ -59,3 +65,5 @@ alias logdir='open $PHARMGKB/runtime/site/logs/'
 alias datadir='open $PHARMGKB/../data/common/'
 alias minecraft='java -d64 -Xmx4g -jar $HOME/Applications/Minecraft/Minecraft.jar'
 alias ans='cd ~/pharmgkb/league-servers/ansible'
+# alias python='python3'
+alias monstat='echo "Should see 4 processes" && ssh es "fileStat && cnStat && esStat && vfStat"'
