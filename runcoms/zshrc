@@ -67,3 +67,8 @@ alias minecraft='java -d64 -Xmx4g -jar $HOME/Applications/Minecraft/Minecraft.ja
 alias ans='cd ~/pharmgkb/league-servers/ansible'
 # alias python='python3'
 alias monstat='echo "Should see 4 processes" && ssh es "fileStat && cnStat && esStat && vfStat"'
+
+alias confw='ln -s $PHARMGKB/../config/live.conf $PHARMGKB/local.properties'
+alias confp='ln -s $PHARMGKB/../config/preview.conf $PHARMGKB/local.properties'
+alias confb='ln -s $PHARMGKB/../config/beta.conf $PHARMGKB/local.properties'
+alias confl='ln -s $PHARMGKB/../config/beta-local.conf $PHARMGKB/local.properties'
