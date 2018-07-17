@@ -21,6 +21,7 @@ export EDITOR=bbedit
 # path
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=~/.rbenv/bin:$PATH
 export PATH=~/.rbenv/shims:$PATH
 export PATH=~/Applications/anaconda3/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -29,6 +30,9 @@ export PATH=/usr/local/opt/apr/bin:$PATH
 
 # enable rbenv shims
 eval "$(rbenv init -)"
+
+# for Node.js NVM
+export NVM_HOME=$HOME/.nvm
 
 # pharmgkb paths
 export PHARMGKB=~/pharmgkb/PharmGKB
@@ -66,9 +70,12 @@ alias datadir='open $PHARMGKB/../data/common/'
 alias minecraft='java -d64 -Xmx4g -jar $HOME/Applications/Minecraft/Minecraft.jar'
 alias ans='cd ~/pharmgkb/league-servers/ansible'
 # alias python='python3'
-alias monstat='echo "Should see 4 processes" && ssh es "fileStat && cnStat && esStat && vfStat"'
+alias monstat='ssh monitor systemctl status es_monitor connection_monitor file_monitor varfreq_monitor'
 
-alias confw='ln -sf $PHARMGKB/../config/live.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
-alias confp='ln -sf $PHARMGKB/../config/preview.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
-alias confb='ln -sf $PHARMGKB/../config/beta.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
-alias confl='ln -sf $PHARMGKB/../config/beta-local.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
+alias confb='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/beta.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
+alias confw='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/live.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
+alias confp='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/preview.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
+alias confl='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/beta-local.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
+
+alias stopwiki='ssh bm sudo service wiki stop'
+alias startwiki='ssh bm sudo service wiki start'
