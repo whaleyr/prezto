@@ -20,7 +20,6 @@ export EDITOR=bbedit
 
 # path
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/.rbenv/bin:$PATH
 export PATH=~/.rbenv/shims:$PATH
 export PATH=~/Applications/anaconda3/bin:$PATH
