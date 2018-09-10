@@ -46,6 +46,7 @@ export CATALINA_HOME=$PHARMGKB_TOOLS/tomcat
 export CATALINA_BASE=$PHARMGKB/runtime
 export ANT_HOME=/usr/local/opt/ant/libexec
 export ANT_OPTS=-Xmx768M
+export GRADLE_HOME=/usr/local
 
 # for ansible
 export ANSIBLE=/usr/local/lib/python2.7/site-packages/ansible
