@@ -74,6 +74,7 @@ alias minecraft='java -d64 -Xmx4g -jar $HOME/Applications/Minecraft/Minecraft.ja
 alias ans='cd ~/pharmgkb/league-servers/ansible'
 # alias python='python3'
 alias monstat='ssh monitor systemctl status es_monitor connection_monitor file_monitor varfreq_monitor'
+alias apistat='curl -s "https://api.pharmgkb.org/v1/preview/site/status" | jq ".dbPoolLive.active"'
 
 alias confb='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/beta.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
 alias confw='rm -f $PHARMGKB/local.properties && cp $PHARMGKB/../config/live.conf $PHARMGKB/local.properties && cd $PHARMGKB && ant config'
