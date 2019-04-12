@@ -40,6 +40,8 @@ export PHARMGKB_TOOLS=~/pharmgkb/tools
 export PHARMGKB_WEB=~/pharmgkb/pgkb-web-site
 export PSB_BASE=~/pharmgkb/PSB
 
+export CPIC=~/cpic/code/CpicData
+
 # java app paths
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/Current/Contents/Home
 export CATALINA_HOME=$PHARMGKB_TOOLS/tomcat
@@ -66,6 +68,7 @@ alias git='/usr/local/bin/git'
 alias smi='cd $PHARMGKB'
 alias web='cd $PHARMGKB_WEB'
 alias psb='cd $PSB_BASE'
+alias cpic='cd $CPIC'
 alias luke='java -jar ~/pharmgkb/tools/lukeall-3.5.0.jar'
 alias league='cd ~/pharmgkb/league-servers'
 alias logdir='open $PHARMGKB/runtime/site/logs/'
