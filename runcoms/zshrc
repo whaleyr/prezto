@@ -40,7 +40,8 @@ export PHARMGKB_TOOLS=~/pharmgkb/tools
 export PHARMGKB_WEB=~/pharmgkb/pgkb-web-site
 export PSB_BASE=~/pharmgkb/PSB
 
-export CPIC=~/cpic/code/CpicData
+export CPIC=~/cpic/code/cpic-data
+export CPIC_DB=localhost
 
 # java app paths
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/Current/Contents/Home
