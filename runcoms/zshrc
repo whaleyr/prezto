@@ -28,7 +28,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/opt/apr/bin:$PATH
 
 # enable rbenv shims
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # for Node.js NVM
 export NVM_HOME=$HOME/.nvm
